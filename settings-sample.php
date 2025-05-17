@@ -10,4 +10,9 @@ define('SEPTA_API_V2_BASE_URL','https://www3.septa.org/api/v2/');
 define('SEPTA_API_FLAT_BASE_URL','https://flat-api.septa.org/');
 
 define('SEPTA_API_USER_AGENT','[your email or similar]');
+
+//Default origin to calculate walk times from. Can be overridden by originlat / originlon URL query parameters
+//Very center of City Hall, Philadelphia
+define('ORIGIN_LAT', isset($_REQUEST['originlat'])? $_REQUEST['originlat']:  39.9523266);
+define('ORIGIN_LON', isset($_REQUEST['originlon'])? $_REQUEST['originlon']: -75.1635336);
 ?>
